@@ -27,7 +27,7 @@ for i in range(0, len(students)):
     if students[i]["id"] == student_id:
         print(i)
 
-# 3.이넘레이트(enumerate) 사용
+# 3.이넘레이트(enumerate) 사용 >>인덱스와 값 모두 뺄 수 있다.
 for i, student in enumerate(students):
     if student["id"] == student_id:
         print(i, student)
