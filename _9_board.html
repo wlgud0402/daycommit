@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <a href="/write">글쓰기</a><br><br>
+
+    <ol>
+        {% for board in boards %}
+            <li><a href="/detail?detail_id={{board.id}}">글제목:{{board.title}}   글쓴이:{{board.user_name}}</a></li>
+        {% endfor %}
+    </ol>
+    
+        {% for page in pages %}
+            <a class="link_page" href="/board?page={{ page }}">{{ page }}</a>
+        {% endfor %}
+        
+</body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);  //window.location.search을 통해 url 쿼리스트링을 파싱함 ex) ?id=hit&no=15747;
+    const page = urlParams.get('page')
+    
+    $(".link_page").each(function() {
+        if($(this).text() === page){
+          $(this).addClass('active')
+        }
+      })
+</script>
+</html>
