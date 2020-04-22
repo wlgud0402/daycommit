@@ -1,0 +1,24 @@
+venv 구성법
+참고 https://dojang.io/mod/page/view.php?id=2470
+
+git init
+
+python -m venv .venv-name(.venv는 그냥 파일명)
+( m = module-name 을 뜻함 )
+
+cd .venv >> cd scripts 
+
+venv활성화: . activate
+
+cd .. >> cd .. 으로 다시 내폴더로 돌아옴
+
+ls 로 잘 되고 있는지 확인
+
+pip install>>아무거나
+
+pip freeze > requirements.txt (requirements.txt 라는 파일에 pip install 된것들을 넣어줌 나중에 여기 저장된것들만 install가능함)
+
+.gitignore 라는 파일을 만들어줌 >> 이곳의 내용은 내가 무시할 폴더를 넣으면 된다 >> /.venv/
+
+나중에 다운받을때>>>>python -m venv .venv로 만들어 준후 pip install -r requirements.txt로 재설치
+
