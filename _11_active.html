@@ -12,19 +12,17 @@
         cursor: pointer;
       }
       .jbBox {
-        border: 1px solid #bcbcbc;
+        border: 1px solid red;
         padding: 20px;
       }
     </style>
-    <script>
-      $( document ).ready( function() {
-        $( 'p' ).click( function() {
-          $( this ).toggleClass( 'jbBox' );
-        } );
-      } );
-    </script>
   </head>
   <body>
     <p>Lorem ipsum dolor.</p>
+    <script>
+        $( 'p' ).click( function() {
+          $( this ).toggleClass( 'jbBox' );
+        } );
+    </script>
   </body>
 </html>
