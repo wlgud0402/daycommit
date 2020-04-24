@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>  
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <style>
+      p {
+        cursor: pointer;
+      }
+      .jbBox {
+        border: 1px solid #bcbcbc;
+        padding: 20px;
+      }
+    </style>
+    <script>
+      $( document ).ready( function() {
+        $( 'p' ).click( function() {
+          $( this ).toggleClass( 'jbBox' );
+        } );
+      } );
+    </script>
+  </head>
+  <body>
+    <p>Lorem ipsum dolor.</p>
+  </body>
+</html>
