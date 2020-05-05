@@ -1,0 +1,12 @@
+"""SELECT boards.id, boards.title, boards.content, boards.created_at, members.uname 
+FROM boards JOIN members ON boards.member_id = members.id where boards.content LIKE %s or boards.title LIKE %s order by boards.created_at desc limit %s,10"""
+
+<python 에서 줄 넘어갈때 """로 이어진채로 유지가능>
+
+문법순서
+join >> where >> order by >> desc limit
+
+1)join으로 묶은후 
+2)where 조건
+3)정렬
+4)limit로 보여줄 행 제한
