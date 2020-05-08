@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes fade-in{
+         /* from to 가아니라 10% 30% 50% 100% 등으로 세밀하게 조절도 가능하다. */
+            from {
+                opacity: 0;
+                background-color: blue;
+            }
+            to {
+                opacity: 1;
+                background-color: black;
+            }
+        }
+        .anime {
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color:red;
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        .box1{
+            color: blue;
+            animation-name: fade-in;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+        .my-btn {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1">sdfsdfsdf</div>
+    <button class="my-btn">a</button>
+    <script>
+        document.querySelector('.my-btn').addEventListener('click', function() {
+            document.querySelector('.my-btn').classList.add('anime')
+        })
+    </script>
+</body>
+</html>
