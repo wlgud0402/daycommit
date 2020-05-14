@@ -1,0 +1,7 @@
+aws 시스템
+
+database만 따로 만들어서 사용할 수 있게 생성해 줌
+
+aws를 사용할때에는 pem 키를 사용해서 보안 upper
+
+filezila를 통해 옮기고 server를 실행할때 pip freeze 를 통해 만들어진 txt를 requirement를 통해 한번에 전부 install
